@@ -190,3 +190,51 @@ Stack trace:
 #1 /home2/aracal41/public_html/modulos/modulos-site/publicacao/visualizar.php(10): retornaDado('SELECT * FROM p...')
 #2 {main}
   thrown in /home2/aracal41/public_html/funcoes/conexao.php on line 17
+[11-Apr-2023 12:51:12 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1 in /home2/aracal41/public_html/funcoes/conexao.php:17
+Stack trace:
+#0 /home2/aracal41/public_html/funcoes/conexao.php(17): PDO->query('SELECT * FROM p...')
+#1 /home2/aracal41/public_html/modulos/modulos-site/publicacao/visualizar.php(10): retornaDado('SELECT * FROM p...')
+#2 {main}
+  thrown in /home2/aracal41/public_html/funcoes/conexao.php on line 17
+[28-Apr-2023 05:05:10 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1 in /home2/aracal41/public_html/funcoes/conexao.php:17
+Stack trace:
+#0 /home2/aracal41/public_html/funcoes/conexao.php(17): PDO->query('SELECT * FROM p...')
+#1 /home2/aracal41/public_html/modulos/modulos-site/publicacao/visualizar.php(10): retornaDado('SELECT * FROM p...')
+#2 {main}
+  thrown in /home2/aracal41/public_html/funcoes/conexao.php on line 17
+[02-May-2023 03:05:29 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''100' at line 1 in /home2/aracal41/public_html/funcoes/conexao.php:17
+Stack trace:
+#0 /home2/aracal41/public_html/funcoes/conexao.php(17): PDO->query('SELECT * FROM p...')
+#1 /home2/aracal41/public_html/modulos/modulos-site/publicacao/visualizar.php(10): retornaDado('SELECT * FROM p...')
+#2 {main}
+  thrown in /home2/aracal41/public_html/funcoes/conexao.php on line 17
+[02-May-2023 04:52:04 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''101' at line 1 in /home2/aracal41/public_html/funcoes/conexao.php:17
+Stack trace:
+#0 /home2/aracal41/public_html/funcoes/conexao.php(17): PDO->query('SELECT * FROM p...')
+#1 /home2/aracal41/public_html/modulos/modulos-site/publicacao/visualizar.php(10): retornaDado('SELECT * FROM p...')
+#2 {main}
+  thrown in /home2/aracal41/public_html/funcoes/conexao.php on line 17
+[13-May-2023 21:15:48 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1 in /home2/aracal41/public_html/funcoes/conexao.php:17
+Stack trace:
+#0 /home2/aracal41/public_html/funcoes/conexao.php(17): PDO->query('SELECT * FROM p...')
+#1 /home2/aracal41/public_html/modulos/modulos-site/publicacao/visualizar.php(10): retornaDado('SELECT * FROM p...')
+#2 {main}
+  thrown in /home2/aracal41/public_html/funcoes/conexao.php on line 17
+[15-May-2023 12:28:52 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''[0]' at line 1 in /home2/aracal41/public_html/funcoes/conexao.php:17
+Stack trace:
+#0 /home2/aracal41/public_html/funcoes/conexao.php(17): PDO->query('SELECT * FROM p...')
+#1 /home2/aracal41/public_html/modulos/modulos-site/publicacao/visualizar.php(10): retornaDado('SELECT * FROM p...')
+#2 {main}
+  thrown in /home2/aracal41/public_html/funcoes/conexao.php on line 17
+[08-Jun-2023 08:14:36 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''100' at line 1 in /home2/aracal41/public_html/funcoes/conexao.php:17
+Stack trace:
+#0 /home2/aracal41/public_html/funcoes/conexao.php(17): PDO->query('SELECT * FROM p...')
+#1 /home2/aracal41/public_html/modulos/modulos-site/publicacao/visualizar.php(10): retornaDado('SELECT * FROM p...')
+#2 {main}
+  thrown in /home2/aracal41/public_html/funcoes/conexao.php on line 17
+[29-Jun-2023 22:50:27 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''[0]' at line 1 in /home2/aracal41/public_html/funcoes/conexao.php:17
+Stack trace:
+#0 /home2/aracal41/public_html/funcoes/conexao.php(17): PDO->query('SELECT * FROM p...')
+#1 /home2/aracal41/public_html/modulos/modulos-site/publicacao/visualizar.php(10): retornaDado('SELECT * FROM p...')
+#2 {main}
+  thrown in /home2/aracal41/public_html/funcoes/conexao.php on line 17

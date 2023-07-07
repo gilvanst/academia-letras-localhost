@@ -6,3 +6,9 @@
 [26-Jan-2023 16:48:12 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
 [26-Jan-2023 16:48:15 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 11
 [27-Jan-2023 15:08:44 America/Fortaleza] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home2/aracal41/public_html/config.php on line 4
+[16-Apr-2023 14:06:52 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''[0]' at line 1 in /home2/aracal41/public_html/funcoes/conexao.php:17
+Stack trace:
+#0 /home2/aracal41/public_html/funcoes/conexao.php(17): PDO->query('SELECT * FROM e...')
+#1 /home2/aracal41/public_html/modulos/modulos-site/noticias/visualizar.php(12): retornaDado('SELECT * FROM e...')
+#2 {main}
+  thrown in /home2/aracal41/public_html/funcoes/conexao.php on line 17

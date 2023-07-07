@@ -1,6 +1,6 @@
 <?php
 
-define('ROOT_PATH', 'http://localhost/academia-letras-localhost/');
+define('ROOT_PATH', 'https://aracaletras.com.br/');
 define('ROOT_DIR', __DIR__);
 
 include_once path('modulos/login/sessao.php');
