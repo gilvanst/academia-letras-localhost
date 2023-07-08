@@ -55,7 +55,6 @@ verificaAcesso();
                                                 <th>Nome</th>
                                                 <th>Email</th>
                                                 <th>Telefone</th>
-                                                <th>Senha</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
@@ -70,7 +69,6 @@ verificaAcesso();
                                                     <td><?= $row['nome'] ?></td>
                                                     <td><?= $row['email'] ?></td>
                                                     <td><?= $row['telefone'] ?></td>
-                                                    <td><?= $row['senha'] ?></td>
                                                     <td width='250' class="text-center">
                                                         <a class="btn btn-sm btn-warning" href="alterar.php?id=<?= $row['id'] ?>">Alterar</a>
                                                         <a class="btn btn-sm btn-danger" href="delete.php?id=<?= $row['id'] ?>" onclick="return confirm('Deseja realmente apagar o registro?')">Excluir</a>
