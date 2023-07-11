@@ -9,7 +9,7 @@ if (!empty($_POST)) {
     $cadeira = $_POST['cadeiraAcad'];
     $posicao    = $_POST['posicaoAcad'];
     $sobre     = $_POST['sobreAcad'];
-    $imagem    = '';
+    
 
     // foto e PDF
     if(!empty($_FILES['fotoAcad'])){
@@ -21,7 +21,8 @@ if (!empty($_POST)) {
         $imagem = move_uploaded_file($_FILES['fotoAcad']['tmp_name'], $imagem_final) ? $nome_imagem : '';
 
         $academico = retornaDado("SELECT fotoAcad FROM academicos WHERE idAcad = $id");
-        apagaArquivo($academico['fotoAcad']);
+        
+        
     }
 
     $pdo = Banco::conectar();
@@ -51,7 +52,9 @@ if (!empty($_POST)) {
 
     if(!empty($imagem)){
        $dados[':foto'] = $imagem;
-    }
+       //Função para apagar arquivo do código
+       apagaArquivo($academico['fotoAcad']);
+    } 
 
     $q->execute($dados);
 
