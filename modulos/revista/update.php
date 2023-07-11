@@ -21,7 +21,7 @@ if (!empty($_POST)) {
         $imagem = move_uploaded_file($_FILES['pdf']['tmp_name'], $imagem_final) ? $nome_imagem : '';
 
         $revista = retornaDado("SELECT pdf FROM revista WHERE id = $id");
-        apagaArquivo($revista['pdf']);
+        
     }
 
 
@@ -51,6 +51,7 @@ if (!empty($_POST)) {
 
     if (!empty($pdf)) {
         $dados[':pdf'] = $pdf;
+        apagaArquivo($revista['pdf']);
     }
 
 
