@@ -24,7 +24,7 @@ if (!empty($_POST)) {
         $imagem = move_uploaded_file($_FILES['imagemEve']['tmp_name'], $imagem_final) ? $nome_imagem : '';
 
         $academico = retornaDado("SELECT imagemEve FROM eventos WHERE idEve = $id");
-        apagaArquivo($academico['imagemEve']);
+        
     }
 
  
@@ -60,6 +60,7 @@ if (!empty($_POST)) {
 
     if (!empty($imagem)) {
         $dados[':imagem'] = $imagem;
+        apagaArquivo($academico['imagemEve']);
     }
 
 
