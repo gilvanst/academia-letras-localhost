@@ -27,7 +27,7 @@ if (!empty($_POST)) {
         $imagem = move_uploaded_file($_FILES['imagem']['tmp_name'], $imagem_final) ? $nome_imagem : '';
 
         $obra = retornaDado("SELECT imagemObra FROM obra WHERE idObra = $id");
-        apagaArquivo($obra['imagemObra']);
+        
     }
 
     if (!empty($_FILES['pdfObra'])) {
@@ -39,7 +39,7 @@ if (!empty($_POST)) {
         $imagem = move_uploaded_file($_FILES['pdfObra']['tmp_name'], $imagem_final) ? $nome_imagem : '';
 
         $obra = retornaDado("SELECT pdfObra FROM obra WHERE idObra = $id");
-        apagaArquivo($obra['pdfObra']);
+        
     }
 
     $pdo = Banco::conectar();
@@ -79,10 +79,12 @@ if (!empty($_POST)) {
 
     if (!empty($imagem)) {
         $dados[':imagem'] = $imagem;
+        apagaArquivo($obra['imagemObra']);
     }
 
     if (!empty($pdf)) {
         $dados[':pdf'] = $pdf;
+        apagaArquivo($obra['pdfObra']);
     }
 
     $q->execute($dados);

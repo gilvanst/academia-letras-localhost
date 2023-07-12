@@ -21,7 +21,7 @@ if (!empty($_POST)) {
         $imagem = move_uploaded_file($_FILES['foto']['tmp_name'], $imagem_final) ? $nome_imagem : '';
 
         $memorial = retornaDado("SELECT foto FROM memorial WHERE id = $id");
-        apagaArquivo($memorial['foto']);
+        
     }
 
     $pdo = Banco::conectar();
@@ -51,6 +51,7 @@ if (!empty($_POST)) {
 
     if(!empty($imagem)){
        $dados[':foto'] = $imagem;
+       apagaArquivo($memorial['foto']);
     }
 
     $q->execute($dados);
