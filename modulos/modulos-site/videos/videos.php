@@ -1,10 +1,7 @@
-
 <?php
 include '../../../config.php';
-
-
-
 ?>
+
 <!DOCTYPE HTML>
 <?php include_once path('template/template-site/head.php'); ?>
 <header id="header">
@@ -24,24 +21,28 @@ include '../../../config.php';
         <!-- Main -->
 
         <section id="main">
+            
+            <a class="text-end" href="https://www.youtube.com/@academiaaracatubensedeletr9776" class="button">Ver mais vídeos</a>
             <div class="container">
 
 
                 <div class="row">
                     <?php
-
-
                     $sql = "SELECT * FROM videos ORDER BY id ASC ";
-
                     $videos = retornaDados($sql);
+                    $videoCount = 0; // Variável para contar o número de vídeos exibidos
 
+                    foreach ($videos as $video) {
+                        $videoCount++; // Incrementa o contador
 
-                    foreach ($videos as $video) { ?>
+                        if ($videoCount > 5) {
+                            break; // Interrompe o loop se o número de vídeos exibidos for maior que 5
+                        }
+                        ?>
                         <div class="col-12">
                             <section class="box blog">
                                 <div>
                                     <div class="row">
-
 
                                         <div class="col-3 col-6-medium col-12-small">
                                             <!-- Feature -->
@@ -54,12 +55,15 @@ include '../../../config.php';
                                                         <p class="mb-4">Sobre: <?= $video['sobre'] ?></p>
                                                     </section>
                                                 </div>
-
-
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </section>
                         </div>
-                    <?php } ?>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </section>
@@ -70,9 +74,7 @@ include '../../../config.php';
             <div class="container">
                 <div class="row gtr-200">
                     <?php include_once path('template/template-site/contato.php'); ?>
-
                 </div>
-
             </div>
         </footer>
 
