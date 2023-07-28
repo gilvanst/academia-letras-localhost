@@ -4,9 +4,9 @@ include '../../config.php';
 verificaAcesso();
 if (!empty($_GET['id'])) {
     $id = $_GET['id'];
-}
+} 
 
-$sql = 'SELECT * FROM usuario where id ';
+$sql = 'SELECT * FROM usuario where id = ' . $id .  '';
 $perfil = retornaDado($sql);
 
 foreach (retornaDado($sql) as $row) {

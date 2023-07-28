@@ -62,7 +62,7 @@ verificaAcesso();
                                         <tbody>
                                             <?php
                                             $pdo = Banco::conectar();
-                                           
+                                            
                                             
                                             $sql = "SELECT * FROM  obra  ";
                                             foreach ($pdo->query($sql) as $row) { ?>

@@ -9,6 +9,7 @@ if (!empty($_POST)) {
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
     $senha = $_POST['senha'];
+    $tipo = $_POST['tipo'];
     $csenha   = $_POST['csenha']; /* Variavel criada para verficação de senha*/
 
     /*Verificando se as senhas são iguais e criando uma frase de verificação*/
@@ -20,9 +21,9 @@ if (!empty($_POST)) {
 
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "UPDATE usuario SET nome = ?, email = ?, telefone = ?, senha = ? WHERE id = ?";
+    $sql = "UPDATE usuario SET nome = ?, email = ?, telefone = ?, senha = ?, tipo = ? WHERE id = ?";
     $q = $pdo->prepare($sql);
-    $q->execute(array($nome, $email, $telefone, $senha, $id));
+    $q->execute(array($nome, $email, $telefone, $senha, $tipo, $id));
     Banco::desconectar();
 
     header("Location: ../perfil/perfil.php?id=$id");

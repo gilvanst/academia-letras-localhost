@@ -62,7 +62,7 @@ verificaAcesso();
                         $telefone = $row['telefone'];
                         $senha = $row['senha'];
                         $csenha = $row['senha'];
-                    
+                        $tipo = $row['tipo'];
                     }
                     Banco::desconectar();
                     ?>
@@ -72,6 +72,24 @@ verificaAcesso();
                             <label for="nome">Nome</label>
                             <input class="form-control" type="text" id="nome" name="nome" value="<?php echo $nome; ?>">
                         </div>
+
+                        <?php if(podeMostrar(['administrador'])){ ?>
+                        <div class="form-group">
+                            <label for="poema">Tipo de usúario</label>
+                            <select class="custom-select" name="tipo" required>
+                                <option><?= $tipo ?>
+                                <option>administrador</option>
+                                <option >autor</option>
+                            </select>
+                            <div class="valid-feedback">
+                            Tudo certo!
+                            </div>
+                            <div class="invalid-feedback">
+                            campo obrigatório!
+                            </div>
+                            
+                            </div>
+                        <?php }?>
 
                         <div class="form-group ">
                             <label for="email">Email</label>
@@ -95,7 +113,7 @@ verificaAcesso();
 
                         <div class="text-right my-3">
                             <input class="btn btn-primary" type="submit" value="Alterar">
-                            
+
                         </div>
                     </form>
 
