@@ -21,8 +21,10 @@ include '../../../config.php';
         <!-- Main -->
 
         <section id="main">
-            
-            <a class="text-end" href="https://www.youtube.com/@academiaaracatubensedeletr9776" class="button">Ver mais vídeos</a>
+            <div class="text-rigth">
+                <a class="button" href="https://www.youtube.com/@academiaaracatubensedeletr9776" class="button">Ver mais vídeos</a>
+            </div>
+            <br>
             <div class="container">
 
 
