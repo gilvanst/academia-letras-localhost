@@ -15,6 +15,7 @@ if (!empty($_GET)) {
     $evento = retornaDado($sql);
 
     apagaArquivo($evento['imagemEve']);
+     
     
 
     //Delete do banco:
