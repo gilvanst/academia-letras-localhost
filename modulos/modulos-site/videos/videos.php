@@ -40,7 +40,7 @@ include '../../../config.php';
                         if ($videoCount > 5) {
                             break; // Interrompe o loop se o número de vídeos exibidos for maior que 5
                         }
-                        ?>
+                    ?>
                         <div class="col-12">
                             <section class="box blog">
                                 <div>
@@ -52,10 +52,13 @@ include '../../../config.php';
                                                 <div class="row">
                                                     <section>
                                                         <h3 class="titulo-hover"><?= $video['nome'] ?></a></h3>
-                                                        <iframe width="560" height="315" src="<?= getEmbedLink($video['link']) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                                                        <p class="mb-4">Sobre: <?= $video['sobre'] ?></p>
+                                                        <div class="video-container">
+                                                            <iframe width="560" height="315" src="<?= getEmbedLink($video['link']) ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="respVideo"></iframe>
+                                                            
+                                                        </div>
+                                                            <p class="mb-4">Sobre: <?= $video['sobre'] ?></p>
                                                     </section>
+                                                    
                                                 </div>
                                             </div>
                                         </div>

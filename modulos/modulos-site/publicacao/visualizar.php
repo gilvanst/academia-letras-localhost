@@ -61,7 +61,7 @@ foreach (retornaDado($sql) as $row) {
                     </div>
                 </div>
                 <div class="text-right">
-                    <a class="button " href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php') ?>">Voltar</a>
+                    <a class="button " href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php') ?>" id="respButton3">Voltar</a>
     
                  </div>
             </div>

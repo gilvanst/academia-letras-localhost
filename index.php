@@ -49,6 +49,7 @@ include 'config.php';
 
 						</article>
 					<?php } ?>
+					
 
 					<!-- Features -->
 					<div class="col-12">
@@ -57,7 +58,7 @@ include 'config.php';
 						<section class="box blog">
 							<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/noticias/noticias.php") ?>"><span>notícias e eventos</span></a></h2>
 							<div>
-								<div class="row">
+								<div class="row" id="respEve">
 									<div class="col-9 col-12-medium">
 										<div class="content">
 											<?php
@@ -75,17 +76,16 @@ include 'config.php';
 															<li class="icon fa-comments"><?= $evento['horaEve'] ?></a></li>
 														</ul>
 													</header>
-													<a href="modulos/modulos-site/noticias/visualizar.php?idEve=<?= $evento['idEve'] ?>" class="image featured"><img src="<?= arquivo('img/' . $evento['imagemEve']) ?>" alt="evento" /></a>
-													<p>
+													<a href="modulos/modulos-site/noticias/visualizar.php?idEve=<?= $evento['idEve'] ?>" class="image featured" id="imgEve"><img src="<?= arquivo('img/' . $evento['imagemEve']) ?>" alt="evento" /></a>
+													<p id="respDescEve">
 														<?= $evento['descricaoEve'] ?>
 													</p>
-													<div class="text-right"></div>
-													<a href="modulos/modulos-site/noticias/noticias.php" class="button">Ver mais</a>
+													<a href="modulos/modulos-site/noticias/noticias.php" class="button" id="respButton">Ver mais</a>
 												</article>
 
 										</div>
 									</div>
-									<div class="col-3 col-12-medium mt-3">
+									<div class="col-3 col-12-medium mt-3" id="respNone">
 										<div class="sidebar">
 
 											<!-- Archives -->
@@ -127,7 +127,7 @@ include 'config.php';
 						<section class="box features">
 							<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/obra/colecao.php") ?>"><span>Coleção</span></a></h2>
 							<div>
-								<div class="row">
+								<div class="row" id="respObra">
 									<?php
 									$sql = "SELECT * FROM obra ORDER BY idObra DESC LIMIT 4";
 									$obras = retornaDados($sql);
@@ -135,14 +135,14 @@ include 'config.php';
 									foreach ($obras as $obra) { ?>
 										<div class="col-3 col-6-medium col-12-small">
 											<!-- Feature -->
-											<section class="box feature">
+											<section class="box feature" id="respImg">
 												<a href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>" class="image featured">
 													<img src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="" />
 												</a>
 
 												<h3><a class="titulo-hover" href="modulos/modulos-site/obra/visualizar.php?idObra=<?= $obra['idObra'] ?>"><?= $obra['tituloObra'] ?></a></h3>
 
-												<p>
+												<p id="respSin">
 													<?= substr($obra['sinopseObra'], 0, 200) ?>...
 												</p>
 											</section>
@@ -155,7 +155,7 @@ include 'config.php';
 							</div>
 						</section>
 						<div class="text-right">
-							<a class="button " href="<?= arquivo('modulos/modulos-site/obra/colecao.php') ?>">Ver mais</a>
+							<a class="button " href="<?= arquivo('modulos/modulos-site/obra/colecao.php') ?>" id="respButton2">Ver mais</a>
 
 						</div>
 					</div>
@@ -164,7 +164,7 @@ include 'config.php';
 						<section class="box features">
 							<h2 class="major titulo-hover"><a href="<?= arquivo("modulos/modulos-site/publicacao/publicacao.php") ?>"><span>Publicações</span></a></h2>
 							<div>
-								<div class="row">
+								<div class="row" id="respPub">
 									<?php
 									$sql = "SELECT * FROM publicacoes ORDER BY IdPub DESC LIMIT 4";
 									$publicacoes = retornaDados($sql);
@@ -172,7 +172,7 @@ include 'config.php';
 									foreach ($publicacoes as $publicacao) { ?>
 										<div class="col-3 col-6-medium col-12-small">
 											<!-- Feature -->
-											<section class="box feature">
+											<section class="box feature" id="respImg">
 												<h3><a class="titulo-hover" href="modulos/modulos-site/publicacao/visualizar.php?IdPub=<?=$publicacao['IdPub']?>"><?= $publicacao['tituloPub'] ?></a></h3>
 
 												<p>
@@ -189,7 +189,7 @@ include 'config.php';
 
 						</section>
 						<div class="text-right">
-							<a class="button " href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php') ?>">Ver mais</a>
+							<a id="respButton2" class="button " href="<?= arquivo('modulos/modulos-site/publicacao/publicacao.php') ?>">Ver mais</a>
 
 						</div>
 					</div>

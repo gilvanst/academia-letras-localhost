@@ -26,7 +26,7 @@ include '../../../config.php';
 		<section id="main">
 			<div class="container">
 
-				<div class="row">
+				<div class="row" >
 
 
 
@@ -50,7 +50,7 @@ include '../../../config.php';
 
 							<div>
 
-								<div class="row">
+								<div class="row" id="respObra">
 									<?php
 									if (!empty($_POST['pesquisa'])) {
 										$sql = "SELECT 
@@ -74,14 +74,14 @@ include '../../../config.php';
 									foreach ($obras as $obra) { ?>
 										<div class="col-3 col-6-medium col-12-small">
 											<!-- Feature -->
-											<section class="box feature">
+											<section class="box feature" id="respImg">
 												<a href="visualizar.php?idObra=<?= $obra['idObra'] ?>" class="image featured">
 													<img src="<?= arquivo('img/' . $obra['imagemObra']) ?>" alt="" />
 
 												</a>
 												<h3><a class="titulo-hover" href="visualizar.php?idObra=<?= $obra['idObra'] ?>"><?= $obra['tituloObra'] ?></a></h3>
 
-												<p>
+												<p id="respSin">
 													<?= substr($obra['sinopseObra'], 0, 200) ?>...
 												</p>
 											</section>

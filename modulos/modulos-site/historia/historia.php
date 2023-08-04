@@ -20,10 +20,10 @@ include '../../../config.php';
 
         <?php include_once path('template/template-site/navbar.php'); ?>
 
-        <section id="main">
-            <div class="container">
+        <section id="main" >
+            <div class="container" >
                 <div class="row gtr-200">
-                    <div class="col-12">
+                    <div class="col-12" id="respHis">
                         <div class="content">
                             <article class="box page-content">
                             <?php

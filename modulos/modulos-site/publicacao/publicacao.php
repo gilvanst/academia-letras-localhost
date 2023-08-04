@@ -72,7 +72,7 @@ include '../../../config.php';
 											<section class="box feature">
 											<h3><a class="titulo-hover" href="visualizar.php?IdPub=<?= $publicacao['IdPub'] ?>"><?= $publicacao['tituloPub'] ?></a></h3>
 
-												<p>
+												<p >
 													<?= substr($publicacao['textoPub'], 0, 200) ?>...
 												</p>
 											</section>

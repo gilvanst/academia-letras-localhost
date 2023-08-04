@@ -21,19 +21,19 @@ include '../../../config.php';
 
 		<!-- Main -->
 		<section id="main">
-			<div class="container">
+			<div class="container" id="respEve2">
 
 				<!-- Blog -->
 				<div class="col-12">
 					<section class="box blog">
-						<div>
-							<div class="row">
+						
+							<div class="row gtr-200" >
 								<?php
-								$sql = "SELECT * FROM eventos ORDER BY idEve DESC ";
-								$eventos = retornaDados($sql);
+									$sql = "SELECT * FROM eventos ORDER BY idEve DESC ";
+									$eventos = retornaDados($sql);
 
-								foreach ($eventos as $evento) { ?>
-									<div class="col-3 col-6-medium col-12-small">
+									foreach ($eventos as $evento) { ?>
+								<div class="col-3 col-6-medium col-12-small">
 										<!-- Feature -->
 										<div class="container-fluid">
 											<div class="row">
@@ -49,22 +49,17 @@ include '../../../config.php';
 											</div>
 										</div>
 										<?php } ?>
+									
+								</div>
+							</div>
+
+						
 					</section>
-					
+
 				</div>
-
-			
 			</div>
+		</section>
 	</div>
-	</div>
-
-	</div>
-	</section>
-
-	</div>
-	</div>
-	</div>
-	</section>
 
 	<!-- Footer -->
 	<footer id="footer">
@@ -74,9 +69,9 @@ include '../../../config.php';
 
 
 			</div>
+		</div>
 	</footer>
 
-	</div>
 	<?php include_once path('template/template-site/importacoes-js.php'); ?>
 
 </body>

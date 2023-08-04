@@ -74,7 +74,7 @@ foreach (retornaDado($sql) as $row) {
                     </div>
                 </div>
                 <div class="text-right">
-                    <a class="button" href="<?= arquivo('modulos/modulos-site/noticias/noticias.php') ?>">Voltar</a>
+                    <a class="button" href="<?= arquivo('modulos/modulos-site/noticias/noticias.php') ?>" id="respButton2">Voltar</a>
                 </div>
             </section>
 
